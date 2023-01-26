@@ -29,15 +29,17 @@ function calculateResult () {
   if (nettoToBrutto.checked === true && tax19percent.checked === true) {
     outputVat.innerHTML = (inputSumValue * 0.19).toFixed(2) + " €";
     endResult.innerHTML = (Number(inputSumValue) + Number(inputSumValue) * 0.19).toFixed(2) + " €";
+    /* endResult.innerHTML = (inputSumValue * 1.19).toFixed(2) + " €"; */
   } else if (nettoToBrutto.checked === true && tax7percent.checked === true) {
     outputVat.innerHTML = (inputSumValue * 0.07).toFixed(2) + " €";
     endResult.innerHTML = (Number(inputSumValue) + Number(inputSumValue) * 0.07).toFixed(2) + " €";
+    /*  endResult.innerHTML = (inputSumValue * 1.07).toFixed(2) + " €"; */
   } else if (bruttoToNetto.checked === true && tax19percent.checked === true) {
-    outputVat.innerHTML = (inputSumValue * 0.19).toFixed(2) + " €";
-    endResult.innerHTML = (inputSumValue - inputSumValue * 0.19).toFixed(2) + " €";
+    outputVat.innerHTML = (inputSumValue - inputSumValue / 1.19).toFixed(2) + " €";
+    endResult.innerHTML = (inputSumValue / 1.19).toFixed(2) + " €";
   } else {
-    outputVat.innerHTML = (inputSumValue * 0.07).toFixed(2) + " €";
-    endResult.innerHTML = (inputSumValue - inputSumValue * 0.07).toFixed(2) + " €";
+    outputVat.innerHTML = (inputSumValue - inputSumValue / 1.07).toFixed(2) + " €";
+    endResult.innerHTML = (inputSumValue / 1.07).toFixed(2) + " €";
   }
 }
 
