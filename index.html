@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>JS Projekt: Mehrwertsteuer-Rechner</title>
+</head>
+
+<body>
+  <h1>Mehrwertsteuer-Rechner</h1>
+
+  <div id="calculator-container">
+    <form action="" class="bcg-color-gray">Was soll berechnet werden?
+      <div>
+        <input type="radio" name="addOrSubtract"> <!-- value dazu fürs JS??? -->
+        <label for="">Merhwertsteuer aufschlagen (Netto zu Brutto)</label>
+      </div>
+      <div>
+        <input type="radio" name="addOrSubtract">
+        <label for="">Merhwertsteuer abziehen (Brutto zu Netto)</label>
+      </div>
+    </form>
+
+    <form action="" class="bcg-color-gray">
+      <p>Merhwertsteuersatz</p> 
+          <input type="radio" name="VATtype">
+          <label for="">19 %</label>
+      
+          <input type="radio" name="VATtype">
+          <label for="">7 %</label>
+    </form>
+
+    <form action="" class="bcg-color-gray">
+      <p>Betrag in Euro</p>
+      <input type="text" id="inputSum"> <!-- oder type number?? -->
+    <!--   <input type="button" value="BERECHNEN" onclick="" id="btn"> -->
+    </form>
+    <input type="button" value="BERECHNEN" onclick="" id="btn">
+
+    <h3>Ergebnis</h3>
+
+    <div class="bcg-color-gray result-container">
+      <p>Mehrwertsteuerbetrag</p>
+      <p>Summe in €</p>
+    </div>
+
+    <div class="bcg-color-gray result-container">
+      <p> Endbetrag</p>
+      <p>Summe in €</p>
+    </div>
+
+  </div>
+  
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
