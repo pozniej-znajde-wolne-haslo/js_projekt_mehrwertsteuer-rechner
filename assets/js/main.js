@@ -26,7 +26,7 @@ function nettoOrBrutto () {
 function calculateResult () {
   const inputSumValue = inputSum.value;
 
-  if (nettoToBrutto.checked === true && tax19percent.checked == true) {
+  if (nettoToBrutto.checked === true && tax19percent.checked === true) {
     outputVat.innerHTML = (inputSumValue * 0.19).toFixed(2) + " €";
     endResult.innerHTML = (Number(inputSumValue) + Number(inputSumValue) * 0.19).toFixed(2) + " €";
   } else if (nettoToBrutto.checked === true && tax7percent.checked === true) {
