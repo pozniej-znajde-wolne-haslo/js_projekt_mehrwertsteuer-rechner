@@ -4,35 +4,34 @@
   box-sizing: border-box;
 }
 
+body {
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#calculator-container {
+  width: 400px;
+  border: 2px solid #9f9f9f8e;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+#calculator-container #taxTypeForm label:first-of-type {
+  margin-right: 15px;
+}
+
 .bcg-color-gray {
   background-color: rgb(245, 241, 241);
   padding: 10px 0 10px 5px;
   margin-bottom: 7px;
 }
 
-body {
-  line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif;
-}
-body h1 {
-  font-size: 23px;
-  color: rgb(52, 97, 134);
-  margin: 25px auto 20px 25px;
-}
-body #calculator-container {
-  width: 400px;
-  border: 2px solid rgba(159, 159, 159, 0.5568627451);
-  border-radius: 5px;
-  margin-left: 25px;
-}
-body #calculator-container #taxRateForm label:first-of-type {
-  margin-right: 15px;
-}
-body #calculator-container #inputSumForm div:first-of-type input {
+form #inputSum {
   width: 150px;
   padding: 4px 7px;
 }
-body #calculator-container #inputSumForm #btn-container #btn {
+
+#btn {
   display: block;
   width: 95%;
   padding: 5px 0 5px 0;
@@ -42,16 +41,23 @@ body #calculator-container #inputSumForm #btn-container #btn {
   border: 0;
   border-radius: 5px;
 }
-body h3 {
+
+h1 {
+  font-size: 23px;
+  color: rgb(52, 97, 134);
+  margin: 25px auto 20px 25px;
+}
+
+h3 {
   color: rgb(72, 138, 192);
   font-size: 16px;
-  border-top: 3px solid rgba(159, 159, 159, 0.5568627451);
+  border-top: 3px solid #9f9f9f8e;
   padding: 10px 0 10px 5px;
 }
-body .result-container p:nth-child(2) {
+
+.result-container p:nth-child(2) {
   color: rgb(52, 97, 134);
   font-size: 18px;
   font-weight: bold;
 }
 
-/*# sourceMappingURL=style.css.map */
