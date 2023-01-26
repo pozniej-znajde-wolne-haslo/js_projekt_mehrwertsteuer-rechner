@@ -16,16 +16,19 @@ body {
   margin-left: 25px;
 }
 
+#calculator-container #taxTypeForm label:first-of-type {
+  margin-right: 15px;
+}
+
 .bcg-color-gray {
   background-color: rgb(245, 241, 241);
   padding: 10px 0 10px 5px;
   margin-bottom: 7px;
 }
 
-
 form #inputSum {
-  width: 100px;
-  padding: 3px;
+  width: 150px;
+  padding: 4px 7px;
 }
 
 #btn {

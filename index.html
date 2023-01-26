@@ -12,43 +12,47 @@
   <h1>Mehrwertsteuer-Rechner</h1>
 
   <div id="calculator-container">
-    <form action="" class="bcg-color-gray">Was soll berechnet werden?
+    <form onsubmit="return false" class="bcg-color-gray">Was soll berechnet werden?
       <div>
-        <input type="radio" name="addOrSubtract"> <!-- value dazu fürs JS??? -->
+        <input type="radio" id="nettoToBrutto" name="addOrSubtract" onchange="nettoOrBrutto()"> 
         <label for="">Merhwertsteuer aufschlagen (Netto zu Brutto)</label>
       </div>
       <div>
-        <input type="radio" name="addOrSubtract">
+        <input type="radio" id="bruttoToNetto" name="addOrSubtract" onchange="nettoOrBrutto()">
         <label for="">Merhwertsteuer abziehen (Brutto zu Netto)</label>
       </div>
     </form>
 
-    <form action="" class="bcg-color-gray">
+    <form onsubmit="return false" class="bcg-color-gray">
       <p>Merhwertsteuersatz</p> 
-          <input type="radio" name="VATtype">
-          <label for="">19 %</label>
-      
-          <input type="radio" name="VATtype">
-          <label for="">7 %</label>
+      <input id="tax19percent" type="radio" name="vatRate" value="19"><!-- oder hier id zum ins JS holen??? -->
+      <label for="tax19percent">19 %</label>
+  
+      <input id="tax7percent" type="radio" name="vatRate" value="7"> <!-- no value nötig?? why?? -->
+      <label for="tax7percent">7 %</label>
     </form>
 
-    <form action="" class="bcg-color-gray">
-      <p>Betrag in Euro</p>
-      <input type="text" id="inputSum"> <!-- oder type number?? -->
-    <!--   <input type="button" value="BERECHNEN" onclick="" id="btn"> -->
+    <form onsubmit="return false">
+      <div class="bcg-color-gray">
+        <p id="typeOfCalculation" >Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</p>
+        <input type="number" id="inputSum" name="inputSum">
+      </div> <!-- oder type number??  value="resultVat"-->
+      
+      <div class="btn-container">
+        <input type="button" id="btn" value="BERECHNEN" onclick="calculateResult()" id="btn">
+      </div>
     </form>
-    <input type="button" value="BERECHNEN" onclick="" id="btn">
 
     <h3>Ergebnis</h3>
 
     <div class="bcg-color-gray result-container">
       <p>Mehrwertsteuerbetrag</p>
-      <p>Summe in €</p>
+      <p id="outputVat">Summe in €</p>
     </div>
 
     <div class="bcg-color-gray result-container">
-      <p> Endbetrag</p>
-      <p>Summe in €</p>
+      <p id="endResultDescription">Bruttobetrag (Endpreis)</p>
+      <p id="endResult">Summe in €</p>
     </div>
 
   </div>
