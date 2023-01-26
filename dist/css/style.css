@@ -7,46 +7,37 @@
 body {
   line-height: 1.6;
   font-family: Arial, Helvetica, sans-serif;
+  /* ==== Class for the gray backround ==== ==== */
+  /* ==== Page Title ==== */
+  /* ==== Container for the CALCULATOR ==== */
+  /* ==== Last section - calculation RESULTS ==== */
 }
-
-/* ==== Class for the gray backround ==== ==== */
-.bcg-color-gray {
+body .bcg-color-gray {
   background-color: rgb(245, 241, 241);
   padding: 10px 0 10px 5px;
   margin-bottom: 7px;
 }
-
-
-/* ==== Page Title ==== */
-h1 {
+body h1 {
   font-size: 23px;
   color: rgb(52, 97, 134);
   margin: 25px auto 20px 25px;
 }
-
-
-/* ==== Container for the CALCULATOR ==== */
-#calculator-container {
+body #calculator-container {
   width: 450px;
-  border: 2px solid #9f9f9f8e;
+  border: 2px solid rgba(159, 159, 159, 0.5568627451);
   border-radius: 5px;
   margin-left: 25px;
+  /*  ==== Form for TAX RATE (19% or 7%) ==== */
+  /* ==== Form with INPUT field and BUTTON ==== */
 }
-
-
-/*  ==== Form for TAX RATE (19% or 7%) ==== */
-#calculator-container #taxRateForm label:first-of-type {
+body #calculator-container #taxRateForm label:first-of-type {
   margin-right: 15px;
 }
-
-
-/* ==== Form with INPUT field and BUTTON ==== */
-#inputSumForm div #inputSum {
+body #calculator-container #inputSumForm div #inputSum {
   width: 150px;
   padding: 4px 7px;
 }
-
-#inputSumForm div #btn {
+body #calculator-container #inputSumForm div #btn {
   display: block;
   width: 95%;
   padding: 5px 0 5px 0;
@@ -56,18 +47,16 @@ h1 {
   border: 0;
   border-radius: 5px;
 }
-
-/* ==== Last section - calculation RESULTS ==== */
-h3 {
+body h3 {
   color: rgb(72, 138, 192);
   font-size: 16px;
-  border-top: 3px solid #9f9f9f8e;
+  border-top: 3px solid rgba(159, 159, 159, 0.5568627451);
   padding: 10px 0 10px 5px;
 }
-
-.result-container p:nth-child(2) {
+body .result-container p:nth-child(2) {
   color: rgb(52, 97, 134);
   font-size: 18px;
   font-weight: bold;
 }
 
+/*# sourceMappingURL=style.css.map */
