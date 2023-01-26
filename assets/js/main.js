@@ -1,7 +1,6 @@
 const nettoToBrutto = document.getElementById('nettoToBrutto');
 const bruttoToNetto = document.getElementById('bruttoToNetto');
 
-// to moje == const output = document.getElementsByName('vatRate'); =='
 const tax19percent = document.getElementById('tax19percent');
 const tax7percent = document.getElementById('tax7percent');
 
@@ -39,7 +38,7 @@ function calculateResult () {
   } else {
     outputVat.innerHTML = (inputSumValue * 0.07).toFixed(2) + " €";
     endResult.innerHTML = (inputSumValue - inputSumValue * 0.07).toFixed(2) + " €";
-}
+  }
 }
 
 

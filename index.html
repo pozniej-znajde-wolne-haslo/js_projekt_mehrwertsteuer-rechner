@@ -14,7 +14,7 @@
   <div id="calculator-container">
     <form onsubmit="return false" class="bcg-color-gray">Was soll berechnet werden?
       <div>
-        <input type="radio" id="nettoToBrutto" name="addOrSubtract" onchange="nettoOrBrutto()"> 
+        <input type="radio" checked="checked" id="nettoToBrutto" name="addOrSubtract" onchange="nettoOrBrutto()"> 
         <label for="">Merhwertsteuer aufschlagen (Netto zu Brutto)</label>
       </div>
       <div>
@@ -23,22 +23,23 @@
       </div>
     </form>
 
-    <form onsubmit="return false" class="bcg-color-gray">
+    <form onsubmit="return false" id="taxRateForm" class="bcg-color-gray">
       <p>Merhwertsteuersatz</p> 
-      <input id="tax19percent" type="radio" name="vatRate" value="19"><!-- oder hier id zum ins JS holen??? -->
+      <input id="tax19percent" type="radio" checked="checked" name="vatRate" value="19">
       <label for="tax19percent">19 %</label>
   
       <input id="tax7percent" type="radio" name="vatRate" value="7"> <!-- no value nötig?? why?? -->
       <label for="tax7percent">7 %</label>
     </form>
 
-    <form onsubmit="return false">
+    <form id="inputSumForm">
       <div class="bcg-color-gray">
-        <p id="typeOfCalculation" >Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</p>
+        <!-- Nettobetrag text and 'description' vom endpreis - haben no 'onsubmit = "return false"' - doof bei page refreshing..  -->
+        <p id="typeOfCalculation">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</p>
         <input type="number" id="inputSum" name="inputSum">
-      </div> <!-- oder type number??  value="resultVat"-->
+      </div> 
       
-      <div class="btn-container">
+      <div>
         <input type="button" id="btn" value="BERECHNEN" onclick="calculateResult()" id="btn">
       </div>
     </form>
@@ -47,17 +48,15 @@
 
     <div class="bcg-color-gray result-container">
       <p>Mehrwertsteuerbetrag</p>
-      <p id="outputVat">Summe in €</p>
+      <p id="outputVat">Betrag in €</p>
     </div>
 
     <div class="bcg-color-gray result-container">
       <p id="endResultDescription">Bruttobetrag (Endpreis)</p>
-      <p id="endResult">Summe in €</p>
+      <p id="endResult">Betrag in €</p>
     </div>
-
   </div>
   
-
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
